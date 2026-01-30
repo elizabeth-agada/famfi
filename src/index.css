@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-spray-50: #ecfdff;
+  --color-spray-100: #cef8ff;
+  --color-spray-200: #a4f0fd;
+  --color-spray-300: #6ae3fb;
+  --color-spray-400: #1fcbf1;
+  --color-spray-500: #03aed7;
+  --color-spray-600: #0689b4;
+  --color-spray-700: #0c6e92;
+  --color-spray-800: #145a76;
+  --color-spray-900: #154a64;
+  --color-spray-950: #073045;
+  
+  --color-chestnut-50: #fcf5f4;
+  --color-chestnut-100: #fae8e6;
+  --color-chestnut-200: #f6d5d2;
+  --color-chestnut-300: #efb7b2;
+  --color-chestnut-400: #e48d85;
+  --color-chestnut-500: #d6675d;
+  --color-chestnut-600: #c44840;
+  --color-chestnut-700: #a23c33;
+  --color-chestnut-800: #86352e;
+  --color-chestnut-900: #70322c;
+  --color-chestnut-950: #3c1613;
+
+  --font-body: Inter, sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+main {
+  @apply overflow-y-auto h-full
+}
+
+input {
+  @apply font-medium
+}
+
+
+@layer components {
+  .text-box {
+    @apply w-full py-3 px-2 border rounded focus:outline-none border-zinc-400 focus:border-zinc-900 bg-white appearance-none disabled:bg-zinc-200 disabled:opacity-50 disabled:cursor-not-allowed text-black
+  }
+
+  .container {
+    @apply w-full max-w-[90%] mx-auto sm:px-4
+  }
+
+  .btn {
+    @apply outline-none shadow-md transition-all duration-500 rounded-md bg-white text-black text-base hover:shadow-lg font-medium py-3.5 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50
+  }
+
+  .spray {
+    @apply hover:bg-spray-600 bg-spray-500 text-white
+  }
+
+  .spray-dark {
+    @apply hover:bg-spray-700 bg-spray-900 text-white
+  }
+
+  .chestnut {
+    @apply hover:bg-chestnut-700 bg-chestnut-600 text-white
+  }
+
+  .pill {
+    @apply rounded-full px-3 py-1.5 text-xs font-medium
+  }
+}
